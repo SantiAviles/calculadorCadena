@@ -11,3 +11,7 @@ test('Devuelve el mismo valor de la cadena', () =>{
 test('Devuelve la suma de dos numeros separados por comas', () =>{
     expect(calcular('1,4')).toBe("5")
 }); 
+
+test('Devuelve la suma de 3 numeros separados por comas', () =>{
+    expect(calcular('1,4,5')).toBe("10")
+}); 

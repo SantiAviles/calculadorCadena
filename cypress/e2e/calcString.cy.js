@@ -19,4 +19,11 @@ describe('Calculadora de Cadenas', ()=> {
             cy.get("#calc-form").submit();
             cy.get("#resultado").should("contain","5");
         });
+
+        it('Suma entre 3 numeros separados por comas', () =>{
+            cy.visit("/");
+            cy.get('#string').clear().type('1,4,5');
+            cy.get("#calc-form").submit();
+            cy.get("#resultado").should("contain","10");
+        });
 });
