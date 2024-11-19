@@ -1,15 +1,13 @@
-import sumar from "./sumador";
+import calcular from "./calcString.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+const input = document.querySelector("#string");
+const form = document.querySelector("#calc-form");
+const div = document.querySelector("#resultado");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const string = input.value;
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>" + calcular(string) + "</p>";
 });
