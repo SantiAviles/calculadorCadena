@@ -6,10 +6,17 @@ describe('Calculadora de Cadenas', ()=> {
             cy.get("#resultado").should("contain","0");
         });
 
-        it('Devuelve el valor ingresado',  ()=>{
+        it('Devuelve el numero ingresado',  ()=>{
             cy.visit("/");
-            cy.get('#string').clear().type('/');
+            cy.get('#string').clear().type('3');
             cy.get("#calc-form").submit();
-            cy.get("#resultado").should("contain","/");
+            cy.get("#resultado").should("contain","3");
+        });
+
+        it('Suma entre 2 numeros separados por comas', () =>{
+            cy.visit("/");
+            cy.get('#string').clear().type('1,4');
+            cy.get("#calc-form").submit();
+            cy.get("#resultado").should("contain","5");
         });
 });

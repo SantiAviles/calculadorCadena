@@ -7,3 +7,7 @@ test('Devuelve 0 cuando no hay nada ingresado', () =>{
 test('Devuelve el mismo valor de la cadena', () =>{
     expect(calcular("4")).toBe("4")
 }); 
+
+test('Devuelve la suma de dos numeros separados por comas', () =>{
+    expect(calcular('1,4')).toBe("5")
+}); 
