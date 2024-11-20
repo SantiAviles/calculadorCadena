@@ -27,3 +27,7 @@ test('Devuelve la suma de 3 numeros separados por guiones', () =>{
 test('Devuelve la suma de numeros separados por guiones y comas', () =>{
     expect(calcular('1-4,5')).toBe("10")
 }); 
+
+test('Devuelve la suma de numeros separados por delimitadores personalizados', () =>{
+    expect(calcular('//[/]1/4/5')).toBe("10")
+}); 

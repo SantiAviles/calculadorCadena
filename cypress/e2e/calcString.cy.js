@@ -47,4 +47,11 @@ describe('Calculadora de Cadenas', ()=> {
             cy.get("#calc-form").submit();
             cy.get("#resultado").should("contain","10");
         });
+
+        it('Suma entre numeros separados por delimitador personalizado', () =>{
+            cy.visit("/");
+            cy.get('#string').clear().type('//[*]1*4*5');
+            cy.get("#calc-form").submit();
+            cy.get("#resultado").should("contain","10");
+        });
 });
