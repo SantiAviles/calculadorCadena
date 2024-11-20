@@ -33,5 +33,9 @@ test('Devuelve la suma de numeros separados por delimitadores personalizados', (
 }); 
 
 test('Devuelve la suma de numeros con limitadores e ignora a los numeros mayores a 1000', () =>{
-    expect(calcular('//[/]1/4000/5')).toBe("6")
+    expect(calcular('//[/] 1/4000/5')).toBe("6")
 }); 
+
+test('Devuelve la suma usando mas de un delimitador personalizado', () => {
+    expect(calcular('//[*][%]1*2%3,7-9')).toBe("22");
+});

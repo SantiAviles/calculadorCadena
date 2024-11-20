@@ -61,4 +61,18 @@ describe('Calculadora de Cadenas', ()=> {
             cy.get("#calc-form").submit();
             cy.get("#resultado").should("contain","5");
         });
+
+        it('Suma entre numeros separados por delimitadores personalizados', () =>{
+            cy.visit("/");
+            cy.get('#string').clear().type('//[*][|]1|4*50');
+            cy.get("#calc-form").submit();
+            cy.get("#resultado").should("contain","55");
+        });
+
+        it('Suma entre numeros separados por delimitadores personalizados y tambien ignora a los numeros mayores a 1000', () =>{
+            cy.visit("/");
+            cy.get('#string').clear().type('//[*][+]1*4*5000+78');
+            cy.get("#calc-form").submit();
+            cy.get("#resultado").should("contain","83");
+        });
 });
