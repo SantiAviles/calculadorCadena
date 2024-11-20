@@ -31,3 +31,7 @@ test('Devuelve la suma de numeros separados por guiones y comas', () =>{
 test('Devuelve la suma de numeros separados por delimitadores personalizados', () =>{
     expect(calcular('//[/]1/4/5')).toBe("10")
 }); 
+
+test('Devuelve la suma de numeros con limitadores e ignora a los numeros mayores a 1000', () =>{
+    expect(calcular('//[/]1/4000/5')).toBe("6")
+}); 

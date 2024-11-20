@@ -13,7 +13,7 @@ function calcular (string) {
             string = string.replace(match[0], "");
         }
     }
-    const numeros = string.split(delimitadoresXDefecto).map(Number);
+    const numeros = string.split(delimitadoresXDefecto).map(Number).filter(num => num <= 1000)
     const result = numeros.reduce((sum, num) => sum + num, 0);
     return result.toString();
 }
