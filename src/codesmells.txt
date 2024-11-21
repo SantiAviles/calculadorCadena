@@ -1,0 +1,5 @@
+-Duplicacion de codigo: La verificación de la cadena vacía y la manipulación de delimitadores estaban repetidas en varias partes del codigo. Esto se centralizo en una funcion.
+
+-Logica compleja en una funcion: Antes, la funcion calcular hacia muchas cosas. Ahora la logica está dividida en funciones mas pequeñas y faciles de entender.
+
+-Nombres de variables poco descriptivos: Algunas variables como delimitadorPersonalizado no eran tan claras. Ahora tenemos nombres más fáciles de entender.
